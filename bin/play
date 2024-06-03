@@ -1,0 +1,17 @@
+#!/bin/sh
+
+# usage:
+#
+# play <game name>
+
+pyxelGamePath="$1.py"
+
+if ! [ -f "$pyxelGamePath" ]; then
+  printf "ERROR: Unknown Game '%s'
+
+  To list available games, run the 'games' command.
+  " "$1"
+  exit 1
+fi
+
+pyxel run "$pyxelGamePath"

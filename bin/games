@@ -1,0 +1,17 @@
+#!/bin/sh
+
+# usage:
+#
+# games
+
+pyxelGamePath="$1.py"
+
+printf "To play a game, run 'play <game name>'
+
+Games:
+
+"
+
+for file in *.py; do 
+  basename $file .py
+done
